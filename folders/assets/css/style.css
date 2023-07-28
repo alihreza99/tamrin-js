@@ -657,10 +657,11 @@ input[type=checkbox] {
   .footer-r h2{
     font-size: 20px;
   }
+
  }
  @media (max-width: 370px){
   .table-item-buy-sell a button{
-    width: 33px;
+    width: 35px;
   }
   .footer h1{
     font-size: 15px
@@ -765,5 +766,25 @@ input[type=checkbox] {
     height: 100%;
     width: 100%;
     margin: 0;
+  }
+
+}
+
+@media (max-width: 320px){
+   tr{
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 2px gray;
+  }
+  td{
+    border-bottom: 0px;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .footer-la{
+    margin-bottom: 15px;
   }
 }
