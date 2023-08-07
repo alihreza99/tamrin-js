@@ -5,13 +5,7 @@
   src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.ttf")  format('ttf');
   src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.woff2")  format('woff2');
 }
-@font-face {
-  font-family: vazir;
-  src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Bold.woff");
-  src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Bold.eot")  format('woff');
-  src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Bold.ttf")  format('ttf');
-  src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Bold.woff2")  format('woff2');
-}
+
 @font-face {
   font-family: Arial;
   src: url("/assets/plagins/fonts/webfonts/fa-brands-400.ttf")  format('ttf');
@@ -723,8 +717,12 @@ input[type=checkbox] {
   .table-item-buy-sell a button{
     width: 40px;
   }
+  .footer{
+    
+    height: 300px;
+  }
   .footer h1{
-    font-size: 15px
+    font-size: 10px;
   }
   .footer-l h2{
     font-size: 20px;
@@ -740,11 +738,28 @@ input[type=checkbox] {
   .table-item-buy-sell a button{
     width: 33px;
   }
+  .ma-page-dropdown{
+    height: 400px;
+  }
+  tr{
+    display: flex;
+    flex-direction: column;
+  }
+  .banner{
+    height: 800px;
+  }
+  .list-arz{
+    margin-top: 200px;
+  }
+  .footer{
+    flex-direction: column;
+    height: 1000px;
+  }
   .footer h1{
-    font-size: 15px
+    font-size: 10px
   }
   .footer-l h2{
-    font-size: 15px;
+    font-size: 10px;
   }
   .footer-l{
     margin-left: 0;
