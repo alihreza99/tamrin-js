@@ -42,7 +42,7 @@ function addKharidOptionItems(selectName) {
     options.sort((a, b) => a.id - b.id).forEach((e) => {
 
         const option = document.createElement('option');
-        option.innerHTML = e.text + " " + e.icon;
+        option.innerHTML = e.icon + " " + e.text;
         option.setAttribute("direction", "ltr");
         if (e.id == 0) {
             if (!selectName)
@@ -64,7 +64,7 @@ function addForoshOptionItems(selectName) {
     options.sort((a, b) => a.id - b.id).forEach((e) => {
 
         const option = document.createElement('option');
-        option.innerHTML = e.text + " " + e.icon;
+        option.innerHTML = e.icon + " " + e.text;
         if (e.id == 0) {
             if (!selectName)
                 option.setAttribute("selected", true);

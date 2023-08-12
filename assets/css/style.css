@@ -1,33 +1,39 @@
 @font-face {
   font-family: vazir;
-  src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.woff");
-  src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.eot")  format('woff');
-  src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.ttf")  format('ttf');
-  src: url("/assets/plagins/fonts/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.woff2")  format('woff2');
+  src: url("/assets/plugins/fonts/fontvaziri/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.woff");
+  src: url("/assets/plugins/fonts/fontvaziri/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.eot")  format('woff');
+  src: url("/assets/plugins/fonts/fontvaziri/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.ttf")  format('ttf');
+  src: url("/assets/plugins/fonts/fontvaziri/vazir-font-v27.2.2-Fontjo.com/Vazir-Regular.woff2")  format('woff2');
 }
 
 @font-face {
   font-family: Arial;
-  src: url("/assets/plagins/fonts/webfonts/fa-brands-400.ttf")  format('ttf');
-  src: url("/assets/plagins/fonts/webfonts/fa-brands-400.woff2") format('woff2');
-  
-}
-@font-face {
-  font-family: Arial;
-  
-  src: url("/assets/plagins/fonts/webfonts/fa-regular-400.ttf")  format('ttf');
-  src: url("/assets/plagins/fonts/webfonts/fa-regular-400.woff2")  format('woff2');
-
+  src: url("/assets/plugins/fonts/fontawesome/webfonts/fa-brands-400.ttf")  format('ttf');
+  src: url("/assets/plugins/fonts/fontawesome/webfonts/fa-brands-400.woff2") format('woff2');
   
 }
 @font-face {
   font-family: Arial;
   
-  src: url("/assets/plagins/fonts/webfonts/fa-solid-900.ttf")  format('ttf');
-  src: url("/assets/plagins/fonts/webfonts/fa-solid-900.woff2")  format('woff2');
+  src: url("/assets/plugins/fonts/fontawesome/webfonts/fa-regular-400.ttf")  format('ttf');
+  src: url("/assets/plugins/fonts/fontawesome/webfonts/fa-regular-400.woff2")  format('woff2');
+
   
 }
-
+@font-face {
+  font-family: Arial;
+  
+  src: url("/assets/plugins/fonts/fontawesome/webfonts/fa-solid-900.ttf")  format('ttf');
+  src: url("/assets/plugins/fonts/fontawesome/webfonts/fa-solid-900.woff2")  format('woff2');
+  
+}
+@font-face {
+  font-family: Arial;
+  
+  src: url("/assets/plugins/fonts/fontawesome/webfonts/fa-v4compatibility.ttf")  format('ttf');
+  src: url("/assets/plugins/fonts/fontawesome/webfonts/fa-v4compatibility.woff2")  format('woff2');
+  
+}
 
 html {
   scroll-behavior: smooth;
@@ -37,10 +43,12 @@ body{
   margin: 0;
   background-color: rgb(255, 255, 255);
   font-family: vazir;
+  
 }
 
 button, .banner-read-more{
   cursor: pointer;
+  font-family: vazir;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -399,7 +407,9 @@ input[type=checkbox] {
     transition: 0.5s;
   }
   .open-sec-page-div{
-    margin-right: 41%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
   }
   .open-sec-page:hover{
     cursor: pointer
@@ -431,8 +441,9 @@ input[type=checkbox] {
 
 .ma-page-dropdown {
   width : 100%; 
-  background: rgb(32, 32, 32);
-  margin : 40px auto; 
+  background: rgb(40, 39, 41);
+  margin-top: 40px;
+   
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -476,22 +487,11 @@ input[type=checkbox] {
   background-color: #1b2a6e;
   border-radius: 10px;
 }
-.ma-page-dropdown span::after {
-  float: right;
-  right: 10%;
-  content: "+";
-}
+
 .convert-box-form label{
   color: white;
 }
-.ma-page-dropdown .slide {
-  clear:both;
-  width:100%;
-  height:0px;
-  overflow: hidden;
-  text-align: center;
-  transition: height .4s ease;
-}
+
 .convert-box-form{
   display: flex;
   justify-content: space-between;
@@ -499,28 +499,14 @@ input[type=checkbox] {
 }
 .convert-box-form select{
   width: 150px;
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #242222;
+  color: rgb(156, 156, 156);
 }
-.ma-page-dropdown .slide li {padding : 20px; list-style-type:none; } 
-
-#touch {position: absolute; opacity: 0; height: 0px;}    
-
-#touch:checked + .slide {height: 1000px;} 
-
-.ma-page-dropdown .slide2 {
-  clear:both;
-  width:100%;
-  height:0px;
-  overflow: hidden;
-  text-align: center;
-  transition: height .4s ease;
+.convert-box-form option{
+  color: rgb(156, 156, 156);
 }
 
-.ma-page-dropdown .slide2 li {padding : 20px;  list-style-type:none;}
-
-#touch2 {position: absolute; opacity: 0; height: 0px;}    
-
-#touch2:checked + .slide2 {height: 1000px;} 
 
 .footer{
   width: 100%;
@@ -614,7 +600,9 @@ input[type=checkbox] {
     background-color:#4c9e9e;
     transition: 0.3s ease;
   }
-
+  .open-sec-page-div{
+    width: 50%;
+  }
   .menu li + li {
     margin-top: 12px;
   }
