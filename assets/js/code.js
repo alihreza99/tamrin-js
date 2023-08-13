@@ -16,32 +16,37 @@ const items = [
     { icon: "fa-layer-group", icon_b: "fa-solid", icon_color: "#264c8c", nameFA: "سولنا", nameEN: "SOL", price: "$  23.714", percent: "2.92%-", value: "SOL", icon2: "fa-solid", icon2_b: "fa-arrow-trend-down", color: "#8f0c11" }]
 
 const options = [
-    { text: "پیشفرض", id: 0, icon:"&#xf039; &nbsp;" },
-    { text: "BTC", id: 1 , icon:"&#xe0b4; &nbsp;" },
-    { text: "USDT", id: 2 , icon:"&#xe07a; &nbsp;" },
-    { text: "ETH", id: 3 , icon:"&#xf42e; &nbsp;" },
-    { text: "SHIB", id: 4 , icon:"&#xf214; &nbsp;" },
-    { text: "DOGE", id: 5 , icon:"&#xe573; &nbsp;" },
-    { text: "LTC", id: 6 , icon:"&#xe1d3; &nbsp;" },
-    { text: "TRX", id: 7 , icon:"&#xe528; &nbsp;" },
-    { text: "ADA", id: 8 , icon:"&#xf551; &nbsp;"},
-    { text: "BNB", id: 9 , icon:"&#xf51e; &nbsp;" },
-    { text: "EOS", id: 10 , icon:"&#xf834; &nbsp;" },
-    { text: "DAI", id: 11 , icon:" &#xe052; &nbsp;" },
-    { text: "XRP", id: 12 , icon:"&#xf168; &nbsp;" },
-    { text: "FTM", id: 13 , icon:"&#xf1b3; &nbsp;" },
-    { text: "USDC", id: 14 , icon:"&#xf81d; &nbsp;" },
-    { text: "SOL", id: 15, icon:" &#xf5fd; &nbsp;"}
+    { text: "پیشفرض", id: 0, icon:"&#xf039; &nbsp;"  },
+    { text: "BTC", id: 1 , icon:"&#xe0b4; &nbsp;",price: "$29,865.89" },
+    { text: "USDT", id: 2 , icon:"&#xe07a; &nbsp;",price: "$1.0" },
+    { text: "ETH", id: 3 , icon:"&#xf42e; &nbsp;" , price: "$1.868"},
+    { text: "SHIB", id: 4 , icon:"&#xf214; &nbsp;" , price: "$ 0.0000077"},
+    { text: "DOGE", id: 5 , icon:"&#xe573; &nbsp;" , price: "$ 0.74"},
+    { text: "LTC", id: 6 , icon:"&#xe1d3; &nbsp;" , price: "$ 0.081"},
+    { text: "TRX", id: 7 , icon:"&#xe528; &nbsp;" , price: "$ 89.51"},
+    { text: "ADA", id: 8 , icon:"&#xf551; &nbsp;", price: "$ 0.307"},
+    { text: "BNB", id: 9 , icon:"&#xf51e; &nbsp;", price: "$ 239.17" },
+    { text: "EOS", id: 10 , icon:"&#xf834; &nbsp;" , price: "$ 0.75"},
+    { text: "DAI", id: 11 , icon:" &#xe052; &nbsp;" , price: "$ 1.0"},
+    { text: "XRP", id: 12 , icon:"&#xf168; &nbsp;" , price: "$ 0.14708"},
+    { text: "FTM", id: 13 , icon:"&#xf1b3; &nbsp;" , price: "$  0.244"},
+    { text: "USDC", id: 14 , icon:"&#xf81d; &nbsp;" , price: "$ 1.0"},
+    { text: "SOL", id: 15, icon:" &#xf5fd; &nbsp;", price: "$  23.714"}
 ];
 
 function addKharidOptionItems(selectName) {
     const parent = document.getElementById("kharid");
+    
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
     options.sort((a, b) => a.id - b.id).forEach((e) => {
 
         const option = document.createElement('option');
+        document.getElementById("kharid").addEventListener('change', () => {
+            const text = document.getElementById("info");
+            text.value = e.price;
+        });
         option.innerHTML = e.icon + " " + e.text;
         option.setAttribute("direction", "ltr");
         if (e.id == 0) {
@@ -53,6 +58,7 @@ function addKharidOptionItems(selectName) {
         if (e.text === selectName)
             option.setAttribute("selected", true);
         parent.appendChild(option);
+        
     });
 }
 
@@ -64,6 +70,7 @@ function addForoshOptionItems(selectName) {
     options.sort((a, b) => a.id - b.id).forEach((e) => {
 
         const option = document.createElement('option');
+        
         option.innerHTML = e.icon + " " + e.text;
         if (e.id == 0) {
             if (!selectName)
@@ -74,6 +81,10 @@ function addForoshOptionItems(selectName) {
         if (e.text === selectName)
             option.setAttribute("selected", true);
         parent.appendChild(option);
+        document.getElementById("forosh").addEventListener('change', () => {
+            const text = document.getElementById("info2");
+            text.value = e.price;
+        });
     });
 }
 
@@ -249,6 +260,8 @@ function addItems(lenght) {
             button.appendChild(p4);
             button.addEventListener("click", () => {
                 addKharidOptionItems(e.nameEN);
+                const text2 = document.getElementById("info");
+                text2.value = e.price;
             })
             const button2 = document.createElement('button');
             anchor.appendChild(button2);
@@ -257,6 +270,8 @@ function addItems(lenght) {
             button2.appendChild(p5);
             button2.addEventListener("click", () => {
                 addForoshOptionItems(e.nameEN);
+                const text2 = document.getElementById("info2");
+                text2.value = e.price;
             })
             parent.appendChild(tr);
         }
