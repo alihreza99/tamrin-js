@@ -149,7 +149,8 @@
     <div id="convert-box" class="ma-page-dropdown">
         <h1>در این بخش میتوان ارز دیجیتال مورد نظر را برای خرید یا فروش انتخاب کرد</h1>
         <div>
-            <form action="#" class="convert-box-form">
+           <div class="box-kharid-forosh">
+            <form action="#" class="convert-box-form" id="convert-box-form1">
                 <div class="convert-box-form-item">
                     <div class="convert-box-form-item-t">
                         <label for="state1"> آیتم های خرید :</label>
@@ -160,25 +161,20 @@
                      <P>کارمزد %0.35</P>
                     </div>
                      <div class="convert-box-form-item-f">
-                        <label for="info" class="sec-lable">میزان سرمایه گذاری</label>
+                        <label for="info" class="sec-lable">مبلغ ورودی برای خرید کوین</label>
                         <input class="sec-input" type="number" id="info-a" placeholder="انتخاب مبلغ">
-                        <label for="info" class="sec-lable" >قیمت خرید</label>
-                        <input class="sec-input" type="text" id="info-b" disabled>
-                        <label for="info" class="sec-lable">نام کوین</label>
-                        <input class="sec-input" type="text" id="info-c" disabled>
+                        <label for="info" class="sec-lable" >قیمت خرید کوین مورد نظر</label>
+                        <input class="sec-input" type="text" id="info-b">
+                        <div class="coin-name">
+                            <p>نام کوین :</p> <p id="coin-name"></p>
+                        </div>
                         <p><i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: rgb(214, 148, 6);"></i>توجه داشته باشید که امکان برداشت، واریز و ثبت سفارش Limit برای این کوین غیرفعال است.</p>
                      </div>
                 </div>
-               
-                <div class="convert-box-search">
-                    <label for="search">سرچ نام کوین</label>
-                    <input type="search" id="search">
-                    <button id="search-btn">جستجو</button>
-                </div>
                 
             </form>
-            <hr class="conver-hr">
-            <form action="#" class="convert-box-form" id="convert-box-form">
+            
+            <form action="#" class="convert-box-form" id="convert-box-form2">
                 <div class="convert-box-form-item">
                     <div class="convert-box-form-item-t">
                         <label for="state2"> آیتم های فروش :</label>
@@ -189,22 +185,20 @@
                     <P>کارمزد %0.35</P>
                     </div>
                      <div class="convert-box-form-item-f">
-                        <label for="info" class="sec-lable" >قیمت فروش</label>
-                        <input class="sec-input" type="text" id="info2-b" disabled>
-                        <label for="info" class="sec-lable">نام کوین</label>
-                        <input class="sec-input" type="text" id="info2-c" disabled>
                         <label for="info" class="sec-lable">تعداد کوین ها برای فروش</label>
                         <input class="sec-input" type="number" id="info2-a" placeholder="تعداد کوین‌ها" >
+                        <label for="info" class="sec-lable" > قیمت فروش کوین مورد نظر</label>
+                        <input class="sec-input" type="text" id="info2-b">
+                        <div class="coin-name">
+                            <p>نام کوین :</p> <p id="coin-name2"></p>
+                        </div>
                         <p><i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: rgb(214, 148, 6);"></i>توجه داشته باشید که امکان برداشت، واریز و ثبت سفارش Limit برای این کوین غیرفعال است.</p>
                      </div>
                 </div>
-                <div class="convert-box-search">
-                    <label for="search">سرچ نام کوین</label>
-                    <input type="search" id="search">
-                    <button id="search-btn" onclick="search()">جستجو</button>
-                </div>
+               
             </form>
             
+           </div>
             <hr>
             <div class="convert-box-question-box">
                 <h1>پرسش‌های متداول</h1>

@@ -275,8 +275,8 @@ function addItems(lenght) {
             button.appendChild(p4);
             button.addEventListener("click", () => {
                 addKharidOptionItems(e.nameEN);
-                const text1 = document.getElementById("info-c");
-                text1.value = e.nameEN;
+                const text1 = document.getElementById("coin-name");
+                text1.innerHTML = e.nameEN;
                 const text2 = document.getElementById("info-b");
                 text2.value =  e.price;
             })
@@ -287,8 +287,8 @@ function addItems(lenght) {
             button2.appendChild(p5);
             button2.addEventListener("click", () => {
                 addForoshOptionItems(e.nameEN);
-                const text1 = document.getElementById("info2-c");
-                text1.value = e.nameEN;
+                const text1 = document.getElementById("coin-name2");
+                text1.innerHTML = e.nameEN;
                 const text2 = document.getElementById("info2-b");
                 text2.value = e.price;
 
