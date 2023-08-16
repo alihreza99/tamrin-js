@@ -151,27 +151,64 @@
         <div>
             <form action="#" class="convert-box-form">
                 <div class="convert-box-form-item">
-                    <label for="state1"> آیتم های خرید :</label>
-                    <select id="kharid" name='state1' style='height: 45px; font-family:Arial' >
+                    <div class="convert-box-form-item-t">
+                        <label for="state1"> آیتم های خرید :</label>
+                        <select id="kharid" name='state1' style='height: 45px; font-family:Arial' >
                      
                      </select>
-                     <label for="info" class="sec-lable">قیمت خرید</label>
-                     <input class="sec-input" type="text" id="info">
+                     <button>معامله</button>
+                     <P>کارمزد %0.35</P>
+                    </div>
+                     <div class="convert-box-form-item-f">
+                        <label for="info" class="sec-lable">میزان سرمایه گذاری</label>
+                        <input class="sec-input" type="number" id="info-a" placeholder="انتخاب مبلغ">
+                        <label for="info" class="sec-lable" >قیمت خرید</label>
+                        <input class="sec-input" type="text" id="info-b" disabled>
+                        <label for="info" class="sec-lable">نام کوین</label>
+                        <input class="sec-input" type="text" id="info-c" disabled>
+                        <p><i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: rgb(214, 148, 6);"></i>توجه داشته باشید که امکان برداشت، واریز و ثبت سفارش Limit برای این کوین غیرفعال است.</p>
+                     </div>
                 </div>
                
+                
+            </form>
+            <hr class="conver-hr">
+            <form action="#" class="convert-box-form" id="convert-box-form">
                 <div class="convert-box-form-item">
-                    
-                    <label for="state2"> آیتم های فروش :</label>
+                    <div class="convert-box-form-item-t">
+                        <label for="state2"> آیتم های فروش :</label>
                     <select id="forosh" name='state2' style='height: 45px; font-family:Arial' >
                     
                     </select>
-                     <label for="info2" class="sec-lable">قیمت فروش</label>
-                     <input class="sec-input" type="text" id="info2">
+                    <button>معامله</button>
+                    <P>کارمزد %0.35</P>
+                    </div>
+                     <div class="convert-box-form-item-f">
+                        <label for="info" class="sec-lable" >قیمت فروش</label>
+                        <input class="sec-input" type="text" id="info2-b" disabled>
+                        <label for="info" class="sec-lable">نام کوین</label>
+                        <input class="sec-input" type="text" id="info2-c" disabled>
+                        <label for="info" class="sec-lable">میزان سرمایه گذاری</label>
+                        <input class="sec-input" type="number" id="info2-a" placeholder="مبلغ دریافتی" disabled>
+                        <p><i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: rgb(214, 148, 6);"></i>توجه داشته باشید که امکان برداشت، واریز و ثبت سفارش Limit برای این کوین غیرفعال است.</p>
+                     </div>
                 </div>
             </form>
-           <div class="convert-box-img-pedar">
+            <hr>
+            <div class="convert-box-question-box">
+                <h1>پرسش‌های متداول</h1>
+                <div>
+                    <p>* چرا نمیتونم بعضی از کوین هارو در بازار پیدا کنم؟</p>
+                    <p>- سایت ما از بسیاری از کوین‌ها پشتیبانی می‌‌کند؛ برخی از این کوین‌‌ها در بازارهای معاملاتی سایت ما خرید و فروش می‌شوند و برخی دیگر دارای بازار نیستند و صرفا امکان خرید و فروش آنی آن‌هادر بخش معامله آنی وجود دارد. در صورتی که به دنبال کوین خاصی می‌گردید، نام آن کوین را در بخش بازارها جستجو کنید؛ در صورتی‌که آن کوین در بازار معاملاتی وجود نداشته باشد، به جستجو در بازارهای آنی هدایت خواهید شد.</p>
+                </div>
+                <div>
+                    <p>* برای معامله باید کارمزد پرداخت کنم؟</p>
+                    <p>- بله  مقدار کارمزد بسته به حجم معاملاتی شما در یک ماه گذشته مشخص می‌شود</p>
+                </div>
+            </div>
+          <!-- <div class="convert-box-img-pedar">
             <img class="convert-box-img" src="./assets/images/bordar.png" alt="border">
-           </div>
+           </div>-->
         </div>
     </div>
 

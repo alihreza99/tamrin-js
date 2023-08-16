@@ -43,10 +43,7 @@ function addKharidOptionItems(selectName) {
     options.sort((a, b) => a.id - b.id).forEach((e) => {
 
         const option = document.createElement('option');
-        document.getElementById("kharid").addEventListener('change', () => {
-            const text = document.getElementById("info");
-            text.value = e.price;
-        });
+        
         option.innerHTML = e.icon + " " + e.text;
         option.setAttribute("direction", "ltr");
         if (e.id == 0) {
@@ -81,12 +78,26 @@ function addForoshOptionItems(selectName) {
         if (e.text === selectName)
             option.setAttribute("selected", true);
         parent.appendChild(option);
-        document.getElementById("forosh").addEventListener('change', () => {
-            const text = document.getElementById("info2");
-            text.value = e.price;
-        });
+       
     });
 }
+let x = options;
+document.getElementById("kharid").addEventListener('change', (event) => {
+    const text = document.getElementById("info");
+   items.forEach(e => {
+    if(event.target.prise == e.price)
+    {
+        text.value = e.price;
+    }
+   });
+});
+
+
+document.getElementById("forosh").addEventListener('change', () => {
+    const text = document.getElementById("info2");
+    text.value = e.price;
+});
+
 
 let showLenght = 4;
 
@@ -260,8 +271,10 @@ function addItems(lenght) {
             button.appendChild(p4);
             button.addEventListener("click", () => {
                 addKharidOptionItems(e.nameEN);
-                const text2 = document.getElementById("info");
-                text2.value = e.price;
+                const text1 = document.getElementById("info-c");
+                text1.value = e.nameEN;
+                const text2 = document.getElementById("info-b");
+                text2.value =  e.price;
             })
             const button2 = document.createElement('button');
             anchor.appendChild(button2);
@@ -270,8 +283,11 @@ function addItems(lenght) {
             button2.appendChild(p5);
             button2.addEventListener("click", () => {
                 addForoshOptionItems(e.nameEN);
-                const text2 = document.getElementById("info2");
+                const text1 = document.getElementById("info2-c");
+                text1.value = e.nameEN;
+                const text2 = document.getElementById("info2-b");
                 text2.value = e.price;
+
             })
             parent.appendChild(tr);
         }
