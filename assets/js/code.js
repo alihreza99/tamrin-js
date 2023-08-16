@@ -81,6 +81,10 @@ function addForoshOptionItems(selectName) {
        
     });
 }
+
+
+
+
 let x = options;
 document.getElementById("kharid").addEventListener('change', (event) => {
     const text = document.getElementById("info");

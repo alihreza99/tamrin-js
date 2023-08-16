@@ -170,6 +170,11 @@
                      </div>
                 </div>
                
+                <div class="convert-box-search">
+                    <label for="search">سرچ نام کوین</label>
+                    <input type="search" id="search">
+                    <button id="search-btn">جستجو</button>
+                </div>
                 
             </form>
             <hr class="conver-hr">
@@ -188,12 +193,18 @@
                         <input class="sec-input" type="text" id="info2-b" disabled>
                         <label for="info" class="sec-lable">نام کوین</label>
                         <input class="sec-input" type="text" id="info2-c" disabled>
-                        <label for="info" class="sec-lable">میزان سرمایه گذاری</label>
-                        <input class="sec-input" type="number" id="info2-a" placeholder="مبلغ دریافتی" disabled>
+                        <label for="info" class="sec-lable">تعداد کوین ها برای فروش</label>
+                        <input class="sec-input" type="number" id="info2-a" placeholder="تعداد کوین‌ها" >
                         <p><i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: rgb(214, 148, 6);"></i>توجه داشته باشید که امکان برداشت، واریز و ثبت سفارش Limit برای این کوین غیرفعال است.</p>
                      </div>
                 </div>
+                <div class="convert-box-search">
+                    <label for="search">سرچ نام کوین</label>
+                    <input type="search" id="search">
+                    <button id="search-btn" onclick="search()">جستجو</button>
+                </div>
             </form>
+            
             <hr>
             <div class="convert-box-question-box">
                 <h1>پرسش‌های متداول</h1>
@@ -206,9 +217,7 @@
                     <p>- بله  مقدار کارمزد بسته به حجم معاملاتی شما در یک ماه گذشته مشخص می‌شود</p>
                 </div>
             </div>
-          <!-- <div class="convert-box-img-pedar">
-            <img class="convert-box-img" src="./assets/images/bordar.png" alt="border">
-           </div>-->
+          
         </div>
     </div>
 
