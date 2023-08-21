@@ -449,7 +449,7 @@ input[type=checkbox] {
   height:1300px ;
 }
 .ma-page-dropdown p{
-  color: rgb(211, 208, 208);
+  color: rgb(155, 154, 154);
 }
 .ma-page-dropdown h1{
   align-self: center;
@@ -464,13 +464,18 @@ input[type=checkbox] {
 }
 
 #kharid:hover{
-  background-color: #056429;
+  background-color: #303130;
+  border-radius: 0px;
+  cursor: pointer;
 }
+
 #kharid *{
   background-color: #2d2f31;
 }
 #forosh:hover{
-  background-color: #640b05;
+  background-color: #303130;
+  border-radius: 0px;
+  cursor: pointer;
 }
 #forosh *{
   background-color: #2d2f31;
@@ -498,7 +503,7 @@ input[type=checkbox] {
 }
 .convert-box-form-item-t{
   margin-top: 55px;
-  border-left: solid rgba(110, 110, 110, 0.4) 2px;
+  border-left: dotted rgba(110, 110, 110, 0.4) 2px;
   margin-right: 30px;
   display: flex;
   flex-direction: column;
@@ -513,8 +518,38 @@ input[type=checkbox] {
   width: 80px;
 }
 .coin-name{
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
+  background-color: rgba(77, 82, 77, 0.3);
+  border-radius: 10px;
+}
+.coin-name p{
+  margin-right: 10px;
+}
+#coin-name{
+  float: left;
+}
+.navar-hadaghal{
+  margin-top: 40px;
+  height: 5px;
+  width: 90%;
+  background-color: rgba(30, 66, 107, 0.5);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.navar-hadaghal button{
+  position: absolute;
+  top: -5px;
+  border-radius: 100px;
+  border: none;
+  width: 15px;
+  height: 15px;
+}
+.firts-btn{
+  background-color: #010e1b;
 }
 .convert-box-form-item-t label, select{
   margin-left: 5px;
@@ -580,8 +615,42 @@ input[type=checkbox] {
   border-radius: 10px;
   color: white;
   margin-top: 10px;
+  
 }
-
+.ma-page-dropdown label{
+  margin-bottom: 20px;
+}
+.karmozd{
+  opacity: 0.7;
+}
+.ma-page-dropdown input{
+  box-shadow: 5px 5px 5px rgb(67, 70, 78);
+}
+.ma-page-dropdown button{
+  box-shadow: 5px 5px 5px rgb(52, 52, 53);
+}
+.ma-page-dropdown input:hover{
+  background-color: #08254d;
+}
+.ma-page-dropdown input:focus{
+  background-color: #08254d;
+}
+.ma-page-dropdown button:hover{
+  background-color: #041b33;
+}
+.drop-dow-btn{
+  width: 90%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.drop-dow-btn button{
+  height: 40px;
+  border-radius: 10px;
+  border: #a5a7b3;
+  color: #888;
+  background-color: #010e1b;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
